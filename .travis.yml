@@ -5,4 +5,4 @@ services:
 before_install: 
     - docker build -t chiri92/docker-react -f Dockerfile.dev .
 script:
-    - docker -e CI=true chiri92/docker-react npm run test 
+    - docker run -e CI=true chiri92/docker-react npm run test 
